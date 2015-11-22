@@ -23,7 +23,6 @@
     <!-- End WOWSlider.com HEAD section -->
 
 
-
   </head>
 <body>
     <?php
