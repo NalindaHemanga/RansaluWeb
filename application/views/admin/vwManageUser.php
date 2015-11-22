@@ -16,7 +16,7 @@ Downloaded from http://devzone.co.in
               <li class="active"><i class="icon-file-alt"></i> Users</li>
               
               
-              <button class="btn btn-primary" type="button" style="float:right;">Add New User</button>
+              <button class="btn btn-primary" type="button" style="float:right;" onclick="window.location='<?php echo base_url(); ?>admin/users/add_user'">Add New User</button>
               <div style="clear: both;"></div>
             </ol>
           </div>

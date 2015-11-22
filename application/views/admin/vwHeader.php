@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="abhishek@devzone.co.in">
 
-     <title>Free Codeigniter Admin Panel with Twitter Bootstrap 3.0 - .arkAdminPanel Ver 2.0 http://devzone.co.in</title>
+     <title>Ransalu Hotel and catering service</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo HTTP_CSS_PATH; ?>bootstrap.css" rel="stylesheet">
@@ -44,7 +44,7 @@ Downloaded from http://devzone.co.in
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="<?php echo base_url(); ?>admin">ARK Admin Panel v2</a>
+            <a class="navbar-brand" href="<?php echo base_url(); ?>admin">Ransalu Admin panel</a>
         </div>
  <?php 
 // Define a default Page
@@ -54,10 +54,10 @@ Downloaded from http://devzone.co.in
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li <?php echo  $pg =='dash' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-<li <?php echo  $pg =='cms' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/cms"><i class="fa fa-file"></i> CMS</a></li>              
-            <li <?php echo  $pg =='user' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/users"><i class="fa fa-file"></i> Users</a></li>
-            <li <?php echo  $pg =='products' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/products"><i class="fa fa-file"></i> Products</a></li>
-            <li <?php echo  $pg =='contact' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/contactus"><i class="fa fa-file"></i> ContactUs</a></li>
+            <li <?php echo  $pg =='user' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/users"><i class="fa fa-file"></i> Users</a></li>              
+            <li <?php echo  $pg =='room' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/userssdf"><i class="fa fa-file"></i> Rooms/Halls</a></li>
+            <li <?php echo  $pg =='products' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/products"><i class="fa fa-file"></i> Menus</a></li>
+            <li <?php echo  $pg =='contact' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/contactus"><i class="fa fa-file"></i> Feedback</a></li>
             
         
           </ul>
