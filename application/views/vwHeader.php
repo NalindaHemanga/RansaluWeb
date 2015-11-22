@@ -15,6 +15,15 @@
       <script src="<?php echo HTTP_JS_PATH; ?>respond.min.js"></script>
     <![endif]-->
 	<script src="<?php echo HTTP_JS_PATH; ?>das.js"></script>
+
+
+    <!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+    <link rel="stylesheet" type="text/css" href="<?php echo HTTP_CSS_PATH; ?>slider/style.css" />
+    <script type="text/javascript" src="<?php echo HTTP_JS_PATH; ?>jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
+
+
+
   </head>
 <body>
     <?php
@@ -36,7 +45,7 @@
             <li <?php echo  $pg =='home' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>">Home</a></li>
             <li <?php echo  $pg =='about' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>aboutus">About</a></li>
             <li <?php echo  $pg =='contact' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>contactus">Contact</a></li>
-                 <li <?php echo  $pg =='signup' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>signup">SignUp</a></li>
+            <li <?php echo  $pg =='signup' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>signup">SignUp</a></li>
 
           </ul>
           <form class="navbar-form navbar-right">

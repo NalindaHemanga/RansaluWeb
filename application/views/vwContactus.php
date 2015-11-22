@@ -17,7 +17,7 @@ Downloaded from http://devzone.co.in
     <div class="panel panel-default" style="width:49%;float:left;">
   <div class="panel-body">
     Company Name,
-    123, Street,
+    124, Street,
     City, 4101254
     Country
   </div>

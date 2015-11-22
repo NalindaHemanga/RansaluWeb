@@ -78,7 +78,7 @@ class Home extends CI_Controller {
         $this->session->unset_userdata('username');
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('title');
-         $this->session->unset_userdata('ag_country');
+        $this->session->unset_userdata('ag_country');
         
         $this->session->unset_userdata('is_client_login');
         $this->session->sess_destroy();
