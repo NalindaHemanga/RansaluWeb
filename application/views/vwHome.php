@@ -1,23 +1,9 @@
 <?php
 $this->load->view('vwHeader');
 ?>
-<!--  
-Load Page Specific CSS and JS here
-Author : Abhishek R. Kaushik 
-Downloaded from http://devzone.co.in
--->
+
 <link href="<?php echo HTTP_CSS_PATH; ?>jumbotron.css" rel="stylesheet">
-
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
+<div style="height: 60px; width: 100%; float: left; background-color: #ffffff" ></div>
     <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
     <div id="wowslider-container1">
         <div class="ws_images"><ul>
@@ -56,24 +42,36 @@ Downloaded from http://devzone.co.in
     <script type="text/javascript" src="<?php echo HTTP_JS_PATH; ?>script.js"></script>
     <!-- End WOWSlider.com BODY section -->
 
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div>
+      <div class="container">
+        <h1>Welcome to Ransalu Receptions & Catering</h1>
+        <p>We accomodate wedding receptions, business luncheons and other special occasions. Once you enter our doors you'll experience the best in luxury accomodation, complemented by the highest levels of service designed to cater to your discerning taste.</p>
+
+      </div>
+    </div>
+
 
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <h2>Luxury Rooms</h2>
+            <img src="<?php echo HTTP_IMAGES_PATH; ?>room.jpg">
+          <p>Stylishly decorated luxury rooms we offer at an affordable range of prices will match your mid-week getaway or that special weekend you've planned with your loved ones perfectly.</p>
           <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
         </div>
         <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <h2>Banquet Halls</h2>
+            <img src="<?php echo HTTP_IMAGES_PATH; ?>hall.jpg">
+          <p>With the ability to offer three separate locations to host your special event, and a variety of menus we are capable of creating the perfect setting for your special occasion.</p>
           <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
        </div>
         <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h2>Location</h2>
+            <img src="<?php echo HTTP_IMAGES_PATH; ?>location.jpg">
+          <p>Situated at the edge of Gampaha city, Ransalu Receptions & Catering offers the perfect environment to host your special event. It is ideal for you to take a break from the busy life in the city.</p>
           <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
         </div>
       </div>
