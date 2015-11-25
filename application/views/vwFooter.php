@@ -1,5 +1,5 @@
      <footer>
-     <p>&copy; Ransalu Receptions and caters <?php echo date('Y') ?></p>
+     <p>&copy; Ransalu Receptions & Caters <?php echo date('Y') ?></p>
       </footer>
     </div> <!-- /container -->
   
