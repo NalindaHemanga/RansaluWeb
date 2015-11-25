@@ -10,7 +10,7 @@ Downloaded from http://devzone.co.in
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>Recetion Halls <small>Manage Reception Halls</small></h1>
+            <h1>Reception Halls <small>Manage Reception Halls</small></h1>
             <ol class="breadcrumb">
               <li><a href="Halls"><i class="icon-dashboard"></i> Halls</a></li>
               <li class="active"><i class="icon-file-alt"></i> Halls</li>
@@ -31,6 +31,7 @@ Downloaded from http://devzone.co.in
                     <th class="header">Hall Name <i class="fa fa-sort"></i></th>
                     <th class="header">Max Seating <i class="fa fa-sort"></i></th>
                     <th class="header">Price per Hour<i class="fa fa-sort"></i></th>
+                    <th class="header"></th>
                     
                   </tr>
                 </thead>
@@ -47,7 +48,7 @@ Downloaded from http://devzone.co.in
                     echo "<td>".$value['rh_name']."</td>";
                     echo "<td>".$value['max_capacity']."</td>";
                     echo "<td>".$value['price_per_hour']."</td>";
-                    
+                     echo "<td><button class='btn btn-primary btn-xs' type='button' ><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button'><i class='fa fa-times'></i> Remove</button/></td>";
             
 
 

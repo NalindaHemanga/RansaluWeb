@@ -51,7 +51,7 @@ Downloaded from http://devzone.co.in
 
 
   
-  <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>admin/users/register_user">
+  <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>admin/halls/register_hall">
   <div class="form-group">
       <label class="control-label col-sm-2" for="name">Reception Hall Name:</label>
       <div class="col-sm-10">

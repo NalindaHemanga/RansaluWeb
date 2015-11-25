@@ -21,33 +21,27 @@ class Halls extends CI_Controller {
         $this->load->view('admin/vwManageHall',$arr);
     }
 
-    public function register_user(){
-         $salt = '5&JDDlwz%Rwh!t2Yg-Igae@QxPzFTSId';
-        $password = $_POST["password"];
-        $enc_pass  = md5($salt.$password);
+    public function register_hall(){
+       
 
         $data=array(
-            "username"=>$_POST['name'],
-            "email"=>$_POST['email'],
-            "password"=> $enc_pass,
-            "block"=>0,
-            "user_type"=>$_POST['usertype'],
-            "telephone"=>$_POST['telephone'],
-            "nic"=>$_POST['nic']
+           "rh_name"=>$_POST['rh_name'],
+           "max_capacity"=>$_POST['max_capacity'],
+           "price_per_hour"=>$_POST['price_per_hour']
             );
 
-        $arr['page'] = 'user';
-        if($this->db->insert('tbl_admin_users', $data)){
+        $arr['page'] = 'hall';
+        if($this->db->insert('reception_hall', $data)){
             $arr['message_type']='success';
-            $arr['message'] = 'A user has been successfully added!';
+            $arr['message'] = 'A Reception Hall has been successfully added!';
         }
         else{
             $arr['message_type']='error';
-             $arr['message'] = 'User registration unsuccessful';
+             $arr['message'] = 'Reception Hall registration unsuccessful';
         
         }
 
-        $this->load->view('admin/vwAddUser',$arr);
+        $this->load->view('admin/vwAddHall',$arr);
 
     }
 
