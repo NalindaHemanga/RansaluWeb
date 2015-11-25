@@ -1,5 +1,5 @@
      <footer>
-     <p>&copy; Company <?php echo date('Y') ?>. ark Admin Panel for Codeigniter. Downloaded from <a href='http://devzone.co.in' target='_blank'>http://devzone.co.in</a></p>
+     <p>&copy; Ransalu Receptions and caters <?php echo date('Y') ?></p>
       </footer>
     </div> <!-- /container -->
   

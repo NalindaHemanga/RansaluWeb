@@ -16,7 +16,7 @@ Downloaded from http://devzone.co.in
               <li class="active"><i class="icon-file-alt"></i> Users</li>
               
               
-              <button class="btn btn-primary" type="button" style="float:right;" onclick="window.location='<?php echo base_url(); ?>admin/users/add_user'">Add New User</button>
+              <button class="btn btn-primary" type="button" style="float:right;" onclick="window.location='<?php echo base_url(); ?>admin/users/add_user'"><i class="fa fa-plus-square"></i> Add New User</button>
               <div style="clear: both;"></div>
             </ol>
           </div>
@@ -33,6 +33,7 @@ Downloaded from http://devzone.co.in
                     <th class="header">NIC No <i class="fa fa-sort"></i></th>
                     <th class="header">Telephone<i class="fa fa-sort"></i></th>
                     <th class="header">User type<i class="fa fa-sort"></i></th>
+                     <th class="header"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,6 +54,7 @@ Downloaded from http://devzone.co.in
                     echo "<td>".$value['nic']."</td>";
                     echo "<td>".$value['telephone']."</td>";
                     echo "<td>".$usertype."</td>";
+                    echo "<td><button class='btn btn-primary btn-xs' type='button' ><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button'><i class='fa fa-times'></i> Remove</button/></td>";
 
 
                     echo "</tr>";
