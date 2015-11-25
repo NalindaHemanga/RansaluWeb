@@ -25,7 +25,7 @@ class Aboutus extends CI_Controller {
     }
 
     public function index() {
-           $arr['page'] ='about';
+        $arr['page'] ='about';
         $this->load->view('vwAboutus',$arr);
     }
 }
