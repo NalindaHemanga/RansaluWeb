@@ -16,10 +16,10 @@ Downloaded from http://devzone.co.in
 <div class="container">
     <div class="panel panel-default">
   <div class="panel-body">
-    Company Name,
-    123, Street,
-    City, 4101254
-    Country
+      Ransalu Receptions & Caters,
+      342, Miriswatta Rd,
+      Gampaha,
+      Sri Lanka
   </div>
 </div>
 

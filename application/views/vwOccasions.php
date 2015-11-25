@@ -4,6 +4,8 @@ $this->load->view('vwHeader');
 
 <link href="<?php echo HTTP_CSS_PATH; ?>starter-template.css" rel="stylesheet">
 <link href="<?php echo HTTP_CSS_PATH; ?>occasions.css" rel="stylesheet">
+<link href="<?php echo HTTP_CSS_PATH; ?>bootstrap.min.css" rel="stylesheet">
+
 
 
 <div class="page-header container">
@@ -99,6 +101,11 @@ $this->load->view('vwHeader');
                 </tr>
             </table>
         </div>
+    </div>
+    <div>
+        <div style="height: 30px; width: 100%; float: left; background-color: #ffffff" ></div>
+        <p>Excited to know our prices? Why don't you generate a quotation and see our amazing prices?</p>
+        <a href="<?php echo base_url(); ?>quotation" class="btn btn-info" role="button">Generate Quotation</a>
     </div>
 </div>
 
