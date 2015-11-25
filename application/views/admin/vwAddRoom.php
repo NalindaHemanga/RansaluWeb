@@ -51,11 +51,11 @@ Downloaded from http://devzone.co.in
 
 
   
-  <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>admin/halls/register_hall">
+  <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>admin/rooms/register_room">
   <div class="form-group">
       <label class="control-label col-sm-2" for="name">Room No:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" id="r_no" name="rh_name" placeholder="Enter Room No" required>
+        <input type="number" class="form-control" id="r_no" name="r_no" placeholder="Enter Room No" required>
       </div>
     </div>
     <div class="form-group">
@@ -63,8 +63,8 @@ Downloaded from http://devzone.co.in
       <div class="col-sm-10">
         <select class="form-control" id="roomtype"  name="type">
         <option value='0' selected="selected">Select Option</option>
-        <option value='Wedding'>Super Luxury</option>
-        <option value='Home Comming'>Regular</option>
+        <option >Super Luxury</option>
+        <option >Regular</option>
 
       </select>
       </div>
@@ -75,19 +75,19 @@ Downloaded from http://devzone.co.in
      <div class="col-sm-10">
           <select class="form-control" id="roomtype"  name="size">
           
-        <option value='0' selected="selected">Select Size</option>
-        <option value='Wedding'>Single Bed</option>
-        <option value='Home Comming'>Double Bed</option>
-        <option value='Home Comming'>Family</option>
+        <option value='0' selected="selected" >Select Size</option>
+        <option >Single Bed</option>
+        <option >Double Bed</option>
+        <option >Family</option>
 
       </select>
       </div>
     </div>
 
      <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Price(Rs):</label>
+      <label class="control-label col-sm-2" for="email">Full Board Price(Rs):</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" id="text" name="price_per_hour" placeholder="Enter Price" required>
+        <input type="number" class="form-control" id="text" name="price" placeholder="Enter Price" required>
       </div>
     </div>
     
