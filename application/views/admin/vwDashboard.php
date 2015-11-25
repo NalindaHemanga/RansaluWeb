@@ -30,7 +30,7 @@ Downloaded from http://devzone.co.in
         </div><!-- /.row -->
 
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <div class="panel panel-info">
               <div class="panel-heading">
                 <div class="row">
@@ -38,8 +38,8 @@ Downloaded from http://devzone.co.in
                     <i class="fa fa-comments fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">456</p>
-                    <p class="announcement-text">New Mentions!</p>
+                    <p class="announcement-heading">12</p>
+                    <p class="announcement-text">New Feedbacks!</p>
                   </div>
                 </div>
               </div>
@@ -47,7 +47,7 @@ Downloaded from http://devzone.co.in
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
-                      View Mentions
+                      View Feedback
                     </div>
                     <div class="col-xs-6 text-right">
                       <i class="fa fa-arrow-circle-right"></i>
@@ -57,7 +57,7 @@ Downloaded from http://devzone.co.in
               </a>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <div class="panel panel-warning">
               <div class="panel-heading">
                 <div class="row">
@@ -65,8 +65,8 @@ Downloaded from http://devzone.co.in
                     <i class="fa fa-check fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">12</p>
-                    <p class="announcement-text">To-Do Items</p>
+                    <p class="announcement-heading">4</p>
+                    <p class="announcement-text">To-Do Events this week</p>
                   </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@ Downloaded from http://devzone.co.in
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
-                      Complete Tasks
+                      Go to events
                     </div>
                     <div class="col-xs-6 text-right">
                       <i class="fa fa-arrow-circle-right"></i>
@@ -84,43 +84,17 @@ Downloaded from http://devzone.co.in
               </a>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="panel panel-danger">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <i class="fa fa-tasks fa-5x"></i>
-                  </div>
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">18</p>
-                    <p class="announcement-text">Crawl Errors</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      Fix Issues
-                    </div>
-                    <div class="col-xs-6 text-right">
-                      <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3">
+          
+          <div class="col-lg-4">
             <div class="panel panel-success">
               <div class="panel-heading">
                 <div class="row">
                   <div class="col-xs-6">
-                    <i class="fa fa-comments fa-5x"></i>
+                    <i class="fa fa-truck fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">56</p>
-                    <p class="announcement-text">New Orders!</p>
+                    <p class="announcement-heading">26</p>
+                    <p class="announcement-text">New Catering Orders!</p>
                   </div>
                 </div>
               </div>
@@ -140,34 +114,10 @@ Downloaded from http://devzone.co.in
           </div>
         </div><!-- /.row -->
 
+       
         <div class="row">
-          <div class="col-lg-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Statistics: October 1, 2013 - October 31, 2013</h3>
-              </div>
-              <div class="panel-body">
-                <div id="morris-chart-area"></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.row -->
-
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Traffic Sources: October 1, 2013 - October 31, 2013</h3>
-              </div>
-              <div class="panel-body">
-                <div id="morris-chart-donut"></div>
-                <div class="text-right">
-                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
+          
+          <div class="col-lg-6">
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-clock-o"></i> Recent Activity</h3>
@@ -213,7 +163,7 @@ Downloaded from http://devzone.co.in
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-money"></i> Recent Transactions</h3>

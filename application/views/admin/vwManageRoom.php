@@ -1,22 +1,19 @@
 <?php
 $this->load->view('admin/vwHeader');
 ?>
-<!--  
-Author : Abhishek R. Kaushik 
-Downloaded from http://devzone.co.in
--->
+
 
       <div id="page-wrapper">
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>Banqueting Halls <small>Manage Banqueting Halls</small></h1>
+            <h1>Rooms <small>Manage Rooms</small></h1>
             <ol class="breadcrumb">
-              <li><a href="Halls"><i class="icon-dashboard"></i> Halls</a></li>
-              <li class="active"><i class="icon-file-alt"></i> Halls</li>
+              <li><a href="Halls"><i class="icon-dashboard"></i> Rooms</a></li>
+              <li class="active"><i class="icon-file-alt"></i> Rooms</li>
               
               
-              <button class="btn btn-primary" type="button" style="float:right;" onclick="window.location='<?php echo base_url(); ?>admin/halls/add_hall'"><i class="fa fa-plus-square"></i> Add New Hall</button>
+              <button class="btn btn-primary" type="button" style="float:right;" onclick="window.location='<?php echo base_url(); ?>admin/rooms/add_room'"><i class="fa fa-plus-square"></i> Add New Room</button>
               <div style="clear: both;"></div>
             </ol>
           </div>
@@ -28,9 +25,10 @@ Downloaded from http://devzone.co.in
               <table class="table table-hover tablesorter">
                 <thead>
                   <tr>
-                    <th class="header">Hall Name <i class="fa fa-sort"></i></th>
-                    <th class="header">Max Seating <i class="fa fa-sort"></i></th>
-                    <th class="header">Price per Hour(Rs) <i class="fa fa-sort"></i></th>
+                    <th class="header">Room No <i class="fa fa-sort"></i></th>
+                    <th class="header">Room Type <i class="fa fa-sort"></i></th>
+                    <th class="header">Size <i class="fa fa-sort"></i></th>
+                    <th class="header">Price<i class="fa fa-sort"></i></th>
                     <th class="header"></th>
                     
                   </tr>
@@ -38,16 +36,17 @@ Downloaded from http://devzone.co.in
                 <tbody>
                   <?php 
 
-                  foreach ($halldata as $key => $value) {
+                  foreach ($roomdata as $key => $value) {
 
 
 
                    
                     
                     echo "<tr>";
-                    echo "<td>".$value['rh_name']."</td>";
-                    echo "<td>".$value['max_capacity']."</td>";
-                    echo "<td>".$value['price_per_hour']."</td>";
+                    echo "<td>".$value['r_no']."</td>";
+                    echo "<td>".$value['type']."</td>";
+                    echo "<td>".$value['size']."</td>";
+                    echo "<td>".$value['price']."</td>";
                      echo "<td><button class='btn btn-primary btn-xs' type='button' ><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button'><i class='fa fa-times'></i> Remove</button/></td>";
             
 
