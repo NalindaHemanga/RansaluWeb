@@ -54,9 +54,10 @@ Downloaded from http://devzone.co.in
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li <?php echo  $pg =='dash' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li <?php echo  $pg =='user' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/users"><i class="fa fa-file"></i> Users</a></li>              
-            <li <?php echo  $pg =='room' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/userssdf"><i class="fa fa-file"></i> Rooms/Halls</a></li>
-            <li <?php echo  $pg =='products' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/products"><i class="fa fa-file"></i> Menus</a></li>
+            <li <?php echo  $pg =='user' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/users"><i class="fa fa-user"></i> Users</a></li>              
+            <li <?php echo  $pg =='room' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/userssdf"><i class="fa fa-home"></i> Rooms</a></li>
+            <li <?php echo  $pg =='hall' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/halls"><i class="fa fa-university"></i> Halls</a></li>
+            <li <?php echo  $pg =='products' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/products"><i class="fa fa-newspaper-o"></i> Menus</a></li>
             <li <?php echo  $pg =='contact' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/contactus"><i class="fa fa-file"></i> Feedback</a></li>
             
         
@@ -64,7 +65,7 @@ Downloaded from http://devzone.co.in
 
           <ul class="nav navbar-nav navbar-right navbar-user">
             <li class="dropdown messages-dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Events <span class="badge">7</span> <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-header">7 New Messages</li>
                 <li class="message-preview">

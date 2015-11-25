@@ -67,7 +67,7 @@ Downloaded from http://devzone.co.in
      <div class="form-group">
       <label class="control-label col-sm-2" for="email">Telephone:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="text" name="telephone" placeholder="Enter Email" pattern="[0-9]{10}" required>
+        <input type="text" class="form-control" id="text" name="telephone" placeholder="Enter Telephone" pattern="[0-9]{10}" required>
       </div>
     </div>
     <div class="form-group">

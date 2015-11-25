@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="<?php echo HTTP_CSS_PATH; ?>favicon.png">
-    <title>Ransalu Receptions & Catering</title>
+    <title>Ransalu Receptions and caterings</title>
     <!-- Bootstrap core CSS -->
     <link href="<?php echo HTTP_CSS_PATH; ?>bootstrap.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo base_url(); ?>">ARK Admin Panel</a>
+          <a class="navbar-brand" href="<?php echo base_url(); ?>admin">Ransalu</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
