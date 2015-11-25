@@ -114,8 +114,22 @@ class Users extends CI_Controller {
         // Code goes here
     }
     
-     public function delete_user() {
-        // Code goes here
+     public function delete_user($id) {
+        $arr['page'] = 'user';
+        
+        
+        $this->db->where('id', $id);        
+        
+        if($this->db->delete('tbl_admin_users')){
+            $arr['message_type']='success';
+            $arr['message'] = 'User Record Deleted successfully!';
+        }
+        else{
+            $arr['message_type']='error';
+            $arr['message'] = 'User Deletion unsuccessful';
+        
+        }
+        $this->load->view('admin/vwDeleteUser',$arr);
     }
     
     
