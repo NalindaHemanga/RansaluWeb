@@ -25,8 +25,7 @@ Downloaded from http://devzone.co.in
             </ol>
             <div class="alert alert-success alert-dismissable">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              Welcome to ARK Admin Panel by <a class="alert-link" href="http://devzone.co.in">DevZone.co.in</a>! 
-            </div>
+              Welcome Ransalu Admin panel</div>
           </div>
         </div><!-- /.row -->
 

@@ -30,53 +30,39 @@ Downloaded from http://devzone.co.in
                   <tr>
                     <th class="header">UserName <i class="fa fa-sort"></i></th>
                     <th class="header">Email <i class="fa fa-sort"></i></th>
-                    <th class="header">Last Login <i class="fa fa-sort"></i></th>
-                    <th class="header">Signup Date<i class="fa fa-sort"></i></th>
+                    <th class="header">NIC No <i class="fa fa-sort"></i></th>
+                    <th class="header">Telephone<i class="fa fa-sort"></i></th>
+                    <th class="header">User type<i class="fa fa-sort"></i></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Sumit</td>
-                    <td>sumit@example.com</td>
-                    <td>Jan 1,2014</td>
-                    <td>Jan 1,2014</td>
-                  </tr>
-                  <tr>
-					<td>Ravi</td>
-                    <td>Ravi@example.com</td>
-                    <td>Jan 1,2014</td>
-                    <td>Jan 1,2014</td>
-                  </tr>
-                  <tr>
-                    <td>Tom</td>
-                    <td>Tom@example.com</td>
-                    <td>Jan 3,2014</td>
-                    <td>Jan 1,2014</td>
-                  </tr>
-                  <tr>
-                   <td>Tina</td>
-                    <td>Tina@example.com</td>
-                    <td>Jan 1,2014</td>
-                    <td>Jan 1,2014</td>
-                  </tr>
-                  <tr>
-                    <td>Sam</td>
-                    <td>Sam@example.com</td>
-                    <td>Jan 1,2014</td>
-                    <td>Jan 1,2014</td>
-                  </tr>
-                  <tr>
-                    <td>John</td>
-                    <td>John@example.com</td>
-                    <td>Oct 23,2013</td>
-                    <td>June 5,2014</td>
-                  </tr>
-                  <tr>
-                    <td>Joseph</td>
-                    <td>Joseph@example.com</td>
-                    <td>Jan 1,2014</td>
-                    <td>Jan 1,2014</td>
-                  </tr>
+                  <?php 
+
+                  foreach ($userdata as $key => $value) {
+
+
+
+                    if($value['user_type']=='SA')
+                      $usertype="Admin";
+                    else
+                      $usertype="User";
+                    
+                    echo "<tr>";
+                    echo "<td>".$value['username']."</td>";
+                    echo "<td>".$value['email']."</td>";
+                    echo "<td>".$value['nic']."</td>";
+                    echo "<td>".$value['telephone']."</td>";
+                    echo "<td>".$usertype."</td>";
+
+
+                    echo "</tr>";
+
+                  }
+                 
+
+
+
+                  ?>
                 </tbody>
               </table>
             </div>

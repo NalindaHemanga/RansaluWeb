@@ -19,11 +19,46 @@ class Users extends CI_Controller {
     }
 
     public function index() {
+        $sql = "SELECT * FROM tbl_admin_users;";
+        $val = $this->db->query($sql);
         $arr['page'] = 'user';
+        $arr['userdata']=$val->result_array();
         $this->load->view('admin/vwManageUser',$arr);
     }
 
+    public function register_user(){
+         $salt = '5&JDDlwz%Rwh!t2Yg-Igae@QxPzFTSId';
+        $password = $_POST["password"];
+        $enc_pass  = md5($salt.$password);
+
+        $data=array(
+            "username"=>$_POST['name'],
+            "email"=>$_POST['email'],
+            "password"=> $enc_pass,
+            "block"=>0,
+            "user_type"=>$_POST['usertype'],
+            "telephone"=>$_POST['telephone'],
+            "nic"=>$_POST['nic']
+            );
+
+        $arr['page'] = 'user';
+        if($this->db->insert('tbl_admin_users', $data)){
+            $arr['message_type']='success';
+            $arr['message'] = 'A user has been successfully added!';
+        }
+        else{
+            $arr['message_type']='error';
+             $arr['message'] = 'User registration unsuccessful';
+        
+        }
+
+        $this->load->view('admin/vwAddUser',$arr);
+
+    }
+
     public function add_user() {
+        
+        
         $arr['page'] = 'user';
         $this->load->view('admin/vwAddUser',$arr);
     }
