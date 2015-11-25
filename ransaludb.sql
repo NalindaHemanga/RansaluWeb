@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2015 at 08:23 AM
+-- Generation Time: Nov 25, 2015 at 01:47 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.24
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('ec31c751110f9d7b039a1544fb73e07c', '::1', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 1448173275, 'a:6:{s:9:"user_data";s:0:"";s:2:"id";s:1:"1";s:8:"username";s:4:"demo";s:5:"email";s:22:"abhishek@devzone.co.in";s:14:"is_admin_login";b:1;s:9:"user_type";s:2:"SA";}');
+('0279136417cf9d6ca1773b0c2a226146', '::1', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 1448455278, 'a:6:{s:9:"user_data";s:0:"";s:2:"id";s:2:"18";s:8:"username";s:5:"admin";s:5:"email";s:17:"admin@ransalu.com";s:14:"is_admin_login";b:1;s:9:"user_type";s:2:"SA";}');
 
 -- --------------------------------------------------------
 
@@ -67,20 +67,6 @@ CREATE TABLE IF NOT EXISTS `event` (
   `type` varchar(45) DEFAULT NULL,
   `e_date` datetime DEFAULT NULL,
   `q_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `feedback`
---
-
-CREATE TABLE IF NOT EXISTS `feedback` (
-  `f_id` int(11) NOT NULL,
-  `name` varchar(45) DEFAULT NULL,
-  `f_date` datetime DEFAULT NULL,
-  `message` varchar(200) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -132,10 +118,19 @@ CREATE TABLE IF NOT EXISTS `quotation` (
 
 CREATE TABLE IF NOT EXISTS `reception_hall` (
   `rh_id` int(11) NOT NULL,
-  `type` varchar(45) DEFAULT NULL,
+  `rh_name` varchar(45) DEFAULT NULL,
   `max_capacity` int(5) DEFAULT NULL,
   `price_per_hour` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reception_hall`
+--
+
+INSERT INTO `reception_hall` (`rh_id`, `rh_name`, `max_capacity`, `price_per_hour`) VALUES
+(5, 'Diamond', 70, 2000),
+(6, 'Ivy', 250, 1500),
+(7, 'Nightshade', 120, 1000);
 
 -- --------------------------------------------------------
 
@@ -145,10 +140,11 @@ CREATE TABLE IF NOT EXISTS `reception_hall` (
 
 CREATE TABLE IF NOT EXISTS `room` (
   `r_id` int(11) NOT NULL,
-  `type` varchar(45) DEFAULT NULL,
-  `size` varchar(45) DEFAULT NULL,
+  `r_no` int(11) NOT NULL,
+  `type` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `size` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `price` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -163,15 +159,19 @@ CREATE TABLE IF NOT EXISTS `tbl_admin_users` (
   `password` varchar(100) NOT NULL,
   `block` tinyint(4) NOT NULL DEFAULT '0',
   `user_type` enum('SA','A') DEFAULT 'SA' COMMENT 'SA: Super Admin,A: Admin',
-  `telephone` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `telephone` varchar(10) NOT NULL,
+  `nic` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_admin_users`
 --
 
-INSERT INTO `tbl_admin_users` (`id`, `username`, `email`, `password`, `block`, `user_type`, `telephone`) VALUES
-(1, 'demo', 'abhishek@devzone.co.in', '7e466fc01a0c7932e96a4a925b11b06a', 0, 'SA', '');
+INSERT INTO `tbl_admin_users` (`id`, `username`, `email`, `password`, `block`, `user_type`, `telephone`, `nic`) VALUES
+(1, 'demo', 'abhishek@devzone.co.in', '7e466fc01a0c7932e96a4a925b11b06a', 0, 'SA', '', NULL),
+(4, 'Nalinda', 'nalinda2hemanga@gmail.com', '4f1a1edc67b9e39c1823f467d9374724', 0, 'SA', '0722456670', '931390473v'),
+(5, 'Kavinda', 'kavinda2sankalpa@gmail.com', 'a96361170b301d076454b17987a63d1d', 0, 'A', '0727000010', '903829387v'),
+(18, 'admin', 'admin@ransalu.com', '217ddd064d5a2ef9b9bf467d8b49443e', 0, 'SA', '0112876352', '604533243v');
 
 -- --------------------------------------------------------
 
@@ -243,12 +243,6 @@ ALTER TABLE `event`
   ADD PRIMARY KEY (`e_id`), ADD KEY `q_e_fk_idx` (`q_id`);
 
 --
--- Indexes for table `feedback`
---
-ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`f_id`);
-
---
 -- Indexes for table `menu`
 --
 ALTER TABLE `menu`
@@ -282,7 +276,7 @@ ALTER TABLE `room`
 -- Indexes for table `tbl_admin_users`
 --
 ALTER TABLE `tbl_admin_users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `nic_UNIQUE` (`nic`);
 
 --
 -- Indexes for table `tbl_cms`
@@ -311,11 +305,6 @@ ALTER TABLE `booking`
 ALTER TABLE `event`
   MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `feedback`
---
-ALTER TABLE `feedback`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
@@ -329,7 +318,7 @@ ALTER TABLE `quotation`
 -- AUTO_INCREMENT for table `reception_hall`
 --
 ALTER TABLE `reception_hall`
-  MODIFY `rh_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `rh_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `room`
 --
@@ -339,7 +328,7 @@ ALTER TABLE `room`
 -- AUTO_INCREMENT for table `tbl_admin_users`
 --
 ALTER TABLE `tbl_admin_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `tbl_cms`
 --

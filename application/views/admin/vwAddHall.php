@@ -10,7 +10,7 @@ Downloaded from http://devzone.co.in
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>Reception Halls <small>Add Reception Hall</small></h1>
+            <h1>Banqueting Halls <small>Add Banqueting Hall</small></h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="icon-dashboard"></i> Halls</a></li>
               <li class="active"><i class="icon-file-alt"></i> Halls</li> 
