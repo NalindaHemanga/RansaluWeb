@@ -25,12 +25,20 @@ class Users extends CI_Controller {
         $arr['userdata']=$val->result_array();
         $this->load->view('admin/vwManageUser',$arr);
     }
+    
+    public function indexUpdate($id) {
+        $sql = "SELECT * FROM tbl_admin_users WHERE id=$id;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'user';
+        $arr['userdata']=$val->result_array();
+        $this->load->view('admin/vwEditUser',$arr);
+    }
 
     public function register_user(){
          $salt = '5&JDDlwz%Rwh!t2Yg-Igae@QxPzFTSId';
         $password = $_POST["password"];
         $enc_pass  = md5($salt.$password);
-
+        
         $data=array(
             "username"=>$_POST['name'],
             "email"=>$_POST['email'],
@@ -62,6 +70,40 @@ class Users extends CI_Controller {
         $arr['page'] = 'user';
         $this->load->view('admin/vwAddUser',$arr);
     }
+    
+    public function update_user($id){        
+        
+        $data=array(
+            "username"=>$_POST['name'],
+            "email"=>$_POST['email'],            
+            "block"=>0,
+            "user_type"=>$_POST['usertype'],
+            "telephone"=>$_POST['telephone'],
+            "nic"=>$_POST['nic']
+            );
+
+        $arr['page'] = 'user';
+        
+        $this->db->where('id', $id);        
+        if($this->db->update('tbl_admin_users', $data)){
+            $arr['message_type']='success';
+            $arr['message'] = 'User details have been successfully updated!';
+        }
+        else{
+            $arr['message_type']='error';
+             $arr['message'] = 'User update unsuccessful';
+        
+        }
+
+        $sql = "SELECT * FROM tbl_admin_users WHERE id=$id;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'user';
+        $arr['userdata']=$val->result_array();
+        
+        $this->load->view('admin/vwEditUser',$arr);
+
+    }
+    
 
      public function edit_user() {
         $arr['page'] = 'user';

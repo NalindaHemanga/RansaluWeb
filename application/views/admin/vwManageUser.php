@@ -54,7 +54,8 @@ Downloaded from http://devzone.co.in
                     echo "<td>".$value['nic']."</td>";
                     echo "<td>".$value['telephone']."</td>";
                     echo "<td>".$usertype."</td>";
-                    echo "<td><button class='btn btn-primary btn-xs' type='button' ><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button'><i class='fa fa-times'></i> Remove</button/></td>";
+                    echo "<td><button class='btn btn-primary btn-xs' type='button' onclick=\"window.location=' ".base_url()."admin/users/indexUpdate/".$value['id']."'\"><i class='fa fa-pencil-square-o'></i> Edit</button/>  ";
+                    echo "<button class='btn btn-danger btn-xs' type='button' ><i class='fa fa-times'></i> Remove  </button></td>";
 
 
                     echo "</tr>";
