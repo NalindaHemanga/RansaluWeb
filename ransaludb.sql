@@ -19,7 +19,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `ransaludb`
 --
+CREATE DATABASE IF NOT EXISTS ransaludb;
 
+USE `ransaludb`;
 -- --------------------------------------------------------
 
 --
