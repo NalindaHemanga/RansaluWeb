@@ -105,13 +105,62 @@ class Users extends CI_Controller {
     }
     
 
-     public function edit_user() {
+     public function edit_user($id) {
         $arr['page'] = 'user';
         $this->load->view('admin/vwEditUser',$arr);
     }
     
-     public function block_user() {
-        // Code goes here
+     public function changePassword($id) {  
+         
+        $sql = "SELECT * FROM tbl_admin_users WHERE id=$id;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'user';
+        $arr['userdata']=$val->result_array();     
+        
+        
+        
+        
+       foreach ($val->result() as $row) {           
+       $enc_oldpass = $row->password ; }
+    
+        echo $enc_oldpass;
+        if(isset($_POST["password"])){
+            
+            $salt = '5&JDDlwz%Rwh!t2Yg-Igae@QxPzFTSId';
+            $password = $_POST["password"];            
+            $enc_pass  = md5($salt.$password);            
+            
+            if($enc_oldpass == $enc_pass ){
+                   
+                $data=array( 
+                    "password"=> $enc_pass   
+                    );
+
+                $arr['page'] = 'user';
+                echo $enc_pass;
+                
+                $this->db->where('id', $id);        
+                if($this->db->update('tbl_admin_users', $data)){
+                    $arr['message_type']='success';
+                    $arr['message'] = 'Password Changed successfully!';
+                }
+                else{
+                    $arr['message_type']='error';
+                     $arr['message'] = 'Password Change unsuccessful!!';
+
+                }
+            }
+            
+            else{
+                    $arr['message_type']='error';
+                     $arr['message'] = 'Password Change unsuccessful!!';
+
+                }
+        
+        }
+        
+        
+        $this->load->view('admin/vwPasswordChange',$arr);
     }
     
      public function delete_user($id) {
