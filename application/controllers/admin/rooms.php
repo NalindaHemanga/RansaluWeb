@@ -25,23 +25,24 @@ class Rooms extends CI_Controller {
        
 
         $data=array(
-           "rh_name"=>$_POST['rh_name'],
-           "max_capacity"=>$_POST['max_capacity'],
-           "price_per_hour"=>$_POST['price_per_hour']
+           "r_no"=>$_POST['r_no'],
+           "size"=>$_POST['size'],
+           "type"=>$_POST['type'],
+           "price"=>$_POST['price']
             );
 
-        $arr['page'] = 'hall';
-        if($this->db->insert('reception_hall', $data)){
+        $arr['page'] = 'room';
+        if($this->db->insert('room', $data)){
             $arr['message_type']='success';
-            $arr['message'] = 'A Reception Hall has been successfully added!';
+            $arr['message'] = 'A Room has been successfully added!';
         }
         else{
             $arr['message_type']='error';
-             $arr['message'] = 'Reception Hall registration unsuccessful';
+             $arr['message'] = 'Room registration unsuccessful';
         
         }
 
-        $this->load->view('admin/vwAddHall',$arr);
+        $this->load->view('admin/vwAddRoom',$arr);
 
     }
 
