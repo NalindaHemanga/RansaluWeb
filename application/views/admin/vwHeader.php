@@ -58,8 +58,8 @@ Downloaded from http://devzone.co.in
             <li <?php echo  $pg =='room' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/rooms"><i class="fa fa-home"></i> Rooms</a></li>
             <li <?php echo  $pg =='hall' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/halls"><i class="fa fa-university"></i> Banqueting Halls</a></li>
             <li <?php echo  $pg =='products' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/products"><i class="fa fa-newspaper-o"></i> Menus</a></li>
-            <li <?php echo  $pg =='products' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/products"><i class="fa fa-newspaper-o"></i> Menus</a></li>
-            <li <?php echo  $pg =='contact' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/contactus"><i class="fa fa-quote-left"></i> Feedback</a></li>
+            <li <?php echo  $pg =='event' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/products"><i class="fa fa-calendar"></i> Events</a></li>
+            <li <?php echo  $pg =='feedback' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>admin/feedbacks"><i class="fa fa-quote-left"></i> Feedback</a></li>
             
         
           </ul>
