@@ -20,6 +20,13 @@ class Rooms extends CI_Controller {
         $arr['roomdata']=$val->result_array();
         $this->load->view('admin/vwManageRoom',$arr);
     }
+     public function indexUpdate($r_id) {
+        $sql = "SELECT * FROM room WHERE r_id=$r_id;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'room';
+        $arr['roomdata']=$val->result_array();
+        $this->load->view('admin/vwEditRoom',$arr);
+    }
 
     public function register_room(){
        
@@ -53,9 +60,51 @@ class Rooms extends CI_Controller {
         $this->load->view('admin/vwAddRoom',$arr);
     }
 
-     public function edit_user() {
-        $arr['page'] = 'user';
-        $this->load->view('admin/vwEditUser',$arr);
+    public function delete_room($r_id) {
+        $arr['page'] = 'room';
+        
+        
+        $this->db->where('r_id', $r_id);        
+        
+        if($this->db->delete('room')){
+            $arr['message_type']='success';
+            $arr['message'] = 'Room Deleted successfully!';
+        }
+        else{
+            $arr['message_type']='error';
+            $arr['message'] = 'Room Deletion unsuccessful';
+        
+        }
+        $this->load->view('admin/vwDeleteRoom',$arr);
+    }
+
+     public function update_room($r_id) {
+         $data=array(
+            "r_no"=>$_POST['r_no'],
+           "size"=>$_POST['size'],
+           "type"=>$_POST['type'],
+           "price"=>$_POST['price']
+            );
+
+        $arr['page'] = 'room';
+        
+        $this->db->where('r_id', $r_id);        
+        if($this->db->update('room', $data)){
+            $arr['message_type']='success';
+            $arr['message'] = 'Room details have been successfully updated!';
+        }
+        else{
+            $arr['message_type']='error';
+             $arr['message'] = 'Room details update unsuccessful';
+        
+        }
+
+        $sql = "SELECT * FROM room WHERE r_id=$r_id;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'room';
+        $arr['roomdata']=$val->result_array();
+        
+        $this->load->view('admin/vwEditRoom',$arr);
     }
     
      public function block_user() {

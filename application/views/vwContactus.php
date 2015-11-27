@@ -10,19 +10,43 @@ Downloaded from http://devzone.co.in
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
  
 <div class="page-header container">
-  <h1><small>Contact Us</small></h1>
+  <h1><small>Contact Us</font></small></h1>
 </div>
 
 
 <div class="container">
-  <div class="panel panel-default" style="width:49%;float:left;">
+  <div class="panel panel-default" style="width:100%;float:left;">
   <div class="panel-body">
-    Ransalu Receptions & Caters,
+    Ransalu Caters,
     342, Miriswatta Rd,
-    Gampaha,
-    Sri Lanka
+    Gampaha
   </div>
 </div>
+
+
+<div class="panel panel-default" style="width:90%;float:left;margin-left: 50px;background-image: url(<?php echo HTTP_IMAGES_PATH; ?>/contact-hotel.jpg);background-repeat: no-repeat;background-size: 100%;border-radius: 25px;">
+
+<form method="post" action="http://localhost/RansaluWeb/contactus/insert_msgs" class="contact">
+    <fieldset class="contact-inner">
+      <p class="contact-input">
+        <input type="text" name="name" placeholder="Your Name…" autofocus required>
+      </p>
+
+      <p class="contact-input">
+        <input type="email" name="email" placeholder="Your Email…" autofocus required>
+      </p>
+
+      <p class="contact-input">
+        <textarea name="message" placeholder="Your Message…" required></textarea>
+      </p>
+
+      <p class="contact-submit">
+        <input type="submit" value="Send Message">
+      </p>
+    </fieldset>
+  </form>
+</div>
+
 
 
 

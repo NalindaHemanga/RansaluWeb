@@ -9,7 +9,7 @@ $this->load->view('admin/vwHeader');
           <div class="col-lg-12">
             <h1>Rooms <small>Manage Rooms</small></h1>
             <ol class="breadcrumb">
-              <li><a href="Halls"><i class="icon-dashboard"></i> Rooms</a></li>
+              <li><a href="Rooms"><i class="icon-dashboard"></i> Rooms</a></li>
               <li class="active"><i class="icon-file-alt"></i> Rooms</li>
               
               
@@ -47,7 +47,7 @@ $this->load->view('admin/vwHeader');
                     echo "<td>".$value['type']."</td>";
                     echo "<td>".$value['size']."</td>";
                     echo "<td>".$value['price']."</td>";
-                     echo "<td><button class='btn btn-primary btn-xs' type='button' ><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button'><i class='fa fa-times'></i> Remove</button/></td>";
+                     echo "<td><button class='btn btn-primary btn-xs' type='button' onclick=\"window.location=' ".base_url()."admin/rooms/indexUpdate/".$value['r_id']."'\" ><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button' onclick=\"window.location=' ".base_url()."admin/rooms/delete_room/".$value['r_id']."'\"><i class='fa fa-times'></i> Remove</button/></td>";
             
 
 

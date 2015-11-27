@@ -21,6 +21,14 @@ class Halls extends CI_Controller {
         $this->load->view('admin/vwManageHall',$arr);
     }
 
+    public function indexUpdate($rh_id) {
+        $sql = "SELECT * FROM reception_hall WHERE rh_id=$rh_id;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'hall';
+        $arr['halldata']=$val->result_array();
+        $this->load->view('admin/vwEditHalls',$arr);
+    }
+
     public function register_hall(){
        
 
@@ -50,6 +58,52 @@ class Halls extends CI_Controller {
         
         $arr['page'] = 'hall';
         $this->load->view('admin/vwAddHall',$arr);
+    }
+
+    public function update_hall($rh_id) {
+         $data=array(
+            "rh_name"=>$_POST['rh_name'],
+           "max_capacity"=>$_POST['max_capacity'],
+           "price_per_hour"=>$_POST['price_per_hour']
+            );
+
+        $arr['page'] = 'hall';
+        
+        $this->db->where('rh_id', $rh_id);        
+        if($this->db->update('reception_hall', $data)){
+            $arr['message_type']='success';
+            $arr['message'] = 'Hall details have been successfully updated!';
+        }
+        else{
+            $arr['message_type']='error';
+             $arr['message'] = 'Hall details update unsuccessful';
+        
+        }
+
+        $sql = "SELECT * FROM reception_hall WHERE rh_id=$rh_id;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'hall';
+        $arr['halldata']=$val->result_array();
+        
+        $this->load->view('admin/vwEditHalls',$arr);
+    }
+
+    public function delete_hall($rh_id) {
+        $arr['page'] = 'hall';
+        
+        
+        $this->db->where('rh_id', $rh_id);        
+        
+        if($this->db->delete('reception_hall')){
+            $arr['message_type']='success';
+            $arr['message'] = 'Hall Deleted successfully!';
+        }
+        else{
+            $arr['message_type']='error';
+            $arr['message'] = 'Hall Deletion unsuccessful';
+        
+        }
+        $this->load->view('admin/vwDeleteHall',$arr);
     }
 
      public function edit_user() {

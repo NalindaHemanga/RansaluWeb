@@ -48,8 +48,8 @@ Downloaded from http://devzone.co.in
                     echo "<td>".$value['rh_name']."</td>";
                     echo "<td>".$value['max_capacity']."</td>";
                     echo "<td>".$value['price_per_hour']."</td>";
-                     echo "<td><button class='btn btn-primary btn-xs' type='button' ><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button'><i class='fa fa-times'></i> Remove</button/></td>";
-            
+                     echo "<td><button class='btn btn-primary btn-xs' type='button' onclick=\"window.location=' ".base_url()."admin/halls/indexUpdate/".$value['rh_id']."'\"><i class='fa fa-pencil-square-o'></i> Edit  </button> <button class='btn btn-danger btn-xs' type='button'  onclick=\"window.location=' ".base_url()."admin/halls/delete_hall/".$value['rh_id']."'\"><i class='fa fa-times'></i> Remove</button/></td>";
+                     //echo "<button class='btn btn-danger btn-xs' type='button' onclick=\"window.location=' ".base_url()."admin/halls/delete_hall/".$value['rh_id']."'\"><i class='fa fa-times'></i> Remove  </button></td>";
 
 
                     echo "</tr>";

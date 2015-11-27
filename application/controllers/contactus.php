@@ -25,13 +25,42 @@ class Contactus extends CI_Controller {
         $this->load->library('form_validation');
     }
 
-    public function index() {
-           $arr['page'] ='contact';
+        public function index() {
+        $sql = "SELECT * FROM feedback;";
+        $val = $this->db->query($sql);
+        $arr['page'] = 'contactus';
+        $arr['contactdata']=$val->result_array();
         $this->load->view('vwContactus',$arr);
     }
 
+    public function insert_msgs(){
+       
+
+        $data=array(
+           "name"=>$_POST['name'],
+           "email"=>$_POST['email'],
+           "message"=>$_POST['message']
+            );
+
+        $arr['page'] = 'contactus';
+        if($this->db->insert('feedback', $data)){
+            $arr['message_type']='success';
+            $arr['message'] = 'A message has been successfully added!';
+        }
+        else{
+            $arr['message_type']='error';
+             $arr['message'] = 'message insertion unsuccessful';
+        
+        }
+
+        $this->load->view('vwContactus',$arr);
+
+    }
+
+     
 
 }
+
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
