@@ -40,6 +40,29 @@ CREATE TABLE IF NOT EXISTS `booking` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE IF NOT EXISTS `feedback` (
+  `f_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `message` text NOT NULL,
+  `f_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`f_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`f_id`, `name`, `email`, `message`, `f_date`) VALUES
+(1, 'Bhagya', 'bngunawardana@gmail.com', 'Great!', '2015-11-26 18:50:18');
+
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ci_sessions`
 --
 
