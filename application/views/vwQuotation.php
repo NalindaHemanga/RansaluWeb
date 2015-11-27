@@ -9,7 +9,7 @@ $this->load->view('vwHeader');
     <div style="height: 60px; width: 100%; float: left; background-color: #ffffff" ></div>
     <h2 align="center" ">Quotation Generator</h2>
     <hr>
-    <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>admin/users/register_user">
+    <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>quotation/register_quote">
         <div class="form-group">
             <label class="control-label col-sm-4" for="name">Name:</label>
             <div class="col-sm-4">
@@ -63,9 +63,9 @@ $this->load->view('vwHeader');
             <label class="control-label col-sm-4" for="hall">Venue:</label>
             <div class="col-sm-4">
                 <select class="form-control" id="hall">
-                    <option value="diamond">Diamond Room</option>
-                    <option value="ivy">Ivy Room</option>
-                    <option value="nightshade">Nightshade Room</option>
+                    <option value="1">Diamond Room</option>
+                    <option value="2">Ivy Room</option>
+                    <option value="3">Nightshade Room</option>
                 </select>
             </div>
         </div>
@@ -73,10 +73,10 @@ $this->load->view('vwHeader');
             <label class="control-label col-sm-4" for="menu">Type of Menu:</label>
             <div class="col-sm-4">
                 <select class="form-control" id="menu">
-                    <option value="day">Full Day</option>
-                    <option value="half">Half Day</option>
-                    <option value="cocktail">Cocktails</option>
-                    <option value="snack">Snacks</option>
+                    <option value="1">Full Day</option>
+                    <option value="2">Half Day</option>
+                    <option value="3">Cocktails</option>
+                    <option value="4">Snacks</option>
                 </select>
             </div>
         </div>

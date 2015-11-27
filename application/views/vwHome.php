@@ -45,7 +45,7 @@ $this->load->view('vwHeader');
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div>
       <div class="container">
-        <h1>Welcome to Ransalu Receptions & Catering</h1>
+        <h1>Welcome to Ransalu Receptions & Caters</h1>
         <p>We accomodate wedding receptions, business luncheons and other special occasions. Once you enter our doors you'll experience the best in luxury accomodation, complemented by the highest levels of service designed to cater to your discerning taste.</p>
 
       </div>

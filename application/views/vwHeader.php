@@ -42,7 +42,8 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li <?php echo  $pg =='home' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>">Home</a></li>
-            <li <?php echo  $pg =='about' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>occasions">Special Occasions</a></li>
+            <li <?php echo  $pg =='occasions' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>occasions">Special Occasions</a></li>
+            <li <?php echo  $pg =='menu' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>menu">Catering</a></li>
             <li <?php echo  $pg =='about' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>aboutus">About</a></li>
             <li <?php echo  $pg =='contact' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>contactus">Contact</a></li>
             <li <?php echo  $pg =='signup' ? 'class="active"' : '' ?>><a href="<?php echo base_url(); ?>signup">SignUp</a></li>
