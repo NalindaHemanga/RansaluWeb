@@ -22,16 +22,34 @@ class Quotation extends CI_Controller {
 
         $menu = $this->db->query($sql1);
         $hall = $this->db->query($sql2);
+        $duration = $_POST['e_time'] - $_POST['s_time'];
 
         $data=array(
-            "description"=>$_POST['description'],
+            "name"=>$_POST['name'],
             "email"=>$_POST['email'],
-            "password"=> $enc_pass,
-            "block"=>0,
-            "user_type"=>$_POST['usertype'],
             "telephone"=>$_POST['telephone'],
-            "nic"=>$_POST['nic']
+            "nic"=>$_POST['nic'],
+            "date"=>$_POST['date'],
+            "duration"=> $duration,
+            "head_count"=>$_POST['guest'],
+            "description"=>$_POST['description'],
+            "m_id" => $_POST['menu'],
+            "rh_id" => $_POST['hall'],
+            "total" => ($menu * $_POST['guest']) + ($duration * $hall)
+
         );
+
+        $arr['page'] = 'user';
+
+        if($this->db->insert('quotation', $data)){
+            $arr['message_type']='success';
+            $arr['message'] = 'User details have been successfully updated!';
+        }
+        else{
+            $arr['message_type']='error';
+            $arr['message'] = 'User update unsuccessful';
+
+        }
 
     }
 

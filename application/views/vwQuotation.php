@@ -56,7 +56,7 @@ $this->load->view('vwHeader');
         <div class="form-group">
             <label class="control-label col-sm-4" for="guest">No. of guests:</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" id="text" name="guest" placeholder="Enter no. of guests" pattern="[0-9]{3}" required>
+                <input type="text" class="form-control" id="text" name="guest" placeholder="Enter no. of guests" required>
             </div>
         </div>
         <div class="form-group">
